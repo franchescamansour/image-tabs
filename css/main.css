@@ -1,0 +1,76 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html{
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  font-family: sans-serif;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+.tabs{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tabs > li{
+  display: inline-block;
+}
+
+.tabs a{
+  display: inline-block;
+  background-color: #e2e2e2;
+  color: #000;
+  text-decoration: none;
+  padding: .5em .75em;
+  border-radius: 8px;
+  transition: all 500ms linear;
+  position: relative;
+}
+
+.tabs a:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.badge{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  top: -5px;
+  left: calc(50% - 5px);
+  transform: rotate(45deg);
+  animation: pulse 1s linear infinite alternate;
+}
+
+@keyframes pulse{
+  0%{
+    opacity: .2;
+    transform: scale(.7) rotate(45deg);
+  }
+
+  100%{
+  opacity: .2;
+  transform: scale(1) rotate(45deg);
+  }
+}
+
+.panel{
+  display: none;
+}
+
+.panel:target{
+  display: block;
+}
