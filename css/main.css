@@ -15,7 +15,7 @@ html {
   text-align: center;
 }
 
-*, *::before, *::after{
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
